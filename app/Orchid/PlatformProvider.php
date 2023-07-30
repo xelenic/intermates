@@ -38,7 +38,12 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('bs.book')
                 ->title('Navigation')
                 ->route(config('platform.index')),
-
+            Menu::make('Blog')
+                ->icon('bs.book')
+                ->list([
+                    Menu::make('Blog')->route('platform.blog'),
+                    Menu::make('Blog Categories')->route('platform.blog.category')]
+                ),
             Menu::make('Example Screen')
                 ->icon('bs.collection')
                 ->route('platform.example')
