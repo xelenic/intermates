@@ -1,0 +1,53 @@
+/*!
+
+ =========================================================
+ * Paper Dashboard 2 - v2.0.1
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+ * Copyright 2020 Creative Tim (http://www.creative-tim.com)
+
+ * Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'paper-dashboard/_variables';
+@import 'paper-dashboard/_mixins';
+
+// Plugins CSS
+@import "paper-dashboard/plugins/_plugin-animate-bootstrap-notify";
+@import "paper-dashboard/plugins/_plugin-perfect-scrollbar";
+
+// Core CSS
+@import "paper-dashboard/_buttons";
+@import "paper-dashboard/_inputs";
+@import "paper-dashboard/_typography";
+@import "paper-dashboard/_misc";
+@import "paper-dashboard/_checkboxes-radio";
+
+
+// components
+@import "paper-dashboard/_navbar";
+@import "paper-dashboard/_page-header";
+@import "paper-dashboard/_dropdown";
+@import "paper-dashboard/_alerts";
+@import "paper-dashboard/_images";
+@import "paper-dashboard/_nucleo-outline";
+@import "paper-dashboard/_tables";
+@import "paper-dashboard/_sidebar-and-main-panel";
+@import "paper-dashboard/_footers";
+@import "paper-dashboard/_fixed-plugin";
+
+// cards
+@import "paper-dashboard/_cards";
+@import "paper-dashboard/cards/_card-plain";
+@import "paper-dashboard/cards/_card-chart";
+@import "paper-dashboard/cards/_card-user";
+@import "paper-dashboard/cards/_card-map";
+@import "paper-dashboard/cards/_card-stats";
+
+@import "paper-dashboard/_responsive";
