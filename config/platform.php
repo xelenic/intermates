@@ -29,7 +29,7 @@ return [
      |
      */
 
-    'prefix' => env('DASHBOARD_PREFIX', '/admin'),
+    'prefix' => env('DASHBOARD_PREFIX', '/user'),
 
     /*
      |--------------------------------------------------------------------------
@@ -160,8 +160,8 @@ return [
      */
 
     'template' => [
-        'header' => '',
-        'footer' => '',
+        'header' => 'brand.header',
+        'footer' => null,
     ],
 
     /*
