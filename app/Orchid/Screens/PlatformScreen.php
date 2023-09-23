@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Orchid\Screens;
 
+use App\Models\Blog;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
@@ -16,7 +17,11 @@ class PlatformScreen extends Screen
      */
     public function query(): iterable
     {
-        return [];
+
+        return [
+            'blog_categories' => Blog::latest()->get(),
+        ];
+
     }
 
     /**
@@ -24,7 +29,7 @@ class PlatformScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'Get Started';
+        return 'Welcome to Xelnitor';
     }
 
     /**
@@ -32,7 +37,7 @@ class PlatformScreen extends Screen
      */
     public function description(): ?string
     {
-        return 'Welcome to your Orchid application.';
+        return 'Your Gateway to the Future of Crypto Trending and Earnings';
     }
 
     /**
@@ -53,8 +58,7 @@ class PlatformScreen extends Screen
     public function layout(): iterable
     {
         return [
-            Layout::view('platform::partials.update-assets'),
-            Layout::view('platform::partials.welcome'),
+            Layout::view('dashboard.welcome_screen.index'),
         ];
     }
 }
