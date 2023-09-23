@@ -15,9 +15,13 @@ use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
 use App\Orchid\Screens\User\UserListScreen;
+
+use App\Orchid\Screens\BlogScreen;
+
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use \App\Orchid\Screens\BlogCategoryScreen;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,6 +94,22 @@ Route::screen('example', ExampleScreen::class)
         ->parent('platform.index')
         ->push('Example Screen'));
 
+Route::screen('blog', BlogScreen::class)
+    ->name('platform.blog')
+    ->breadcrumbs(function (Trail $trail){
+        return $trail
+            ->parent('platform.blog')
+            ->push('Blog');
+    });
+
+Route::screen('task', BlogCategoryScreen::class)
+    ->name('blog.categories')
+    ->breadcrumbs(function (Trail $trail){
+        return $trail
+            ->parent('blog')
+            ->push('Blog Categories');
+    });
+
 Route::screen('/form/examples/fields', ExampleFieldsScreen::class)->name('platform.example.fields');
 Route::screen('/form/examples/advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
 Route::screen('/form/examples/editors', ExampleTextEditorsScreen::class)->name('platform.example.editors');
@@ -98,5 +118,11 @@ Route::screen('/form/examples/actions', ExampleActionsScreen::class)->name('plat
 Route::screen('/layout/examples/layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
 Route::screen('/charts/examples/charts', ExampleChartsScreen::class)->name('platform.example.charts');
 Route::screen('/cards/examples/cards', ExampleCardsScreen::class)->name('platform.example.cards');
+
+Route::screen('blog', BlogScreen::class)->name('platform.blog');
+Route::screen('blog-category',  BlogCategoryScreen::class)->name('platform.blog.category');
+
+
+
 
 //Route::screen('idea', Idea::class, 'platform.screens.idea');
